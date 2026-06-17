@@ -16,7 +16,7 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
             rel="stylesheet">
     </head>
-
+    
     <body>
         <div class="main">
 
@@ -193,9 +193,9 @@
 
             <img src="./Assets/player_icon2.png" class="player-control-icon">
 
-            <img src="./Assets/player_icon3.png"
-                class="player-control-icon"
-                style="opacity:1; height:2rem;">
+            <i class="fa-solid fa-circle-play player-control-icon"
+              id="play-btn"
+              style="font-size:1.5rem; opacity:1;"></i>
 
             <img src="./Assets/player_icon4.png" class="player-control-icon">
 
@@ -210,6 +210,7 @@
                 min="0"
                 max="100"
                 step="1"
+                value="0"
                 class="progress-bar">
 
             <span class="tot-time">3:33</span>
@@ -219,10 +220,17 @@
 
     <!-- Controls Section -->
     <div class="controls">
-    <i class="fa-solid fa-microphone"></i>
-    <i class="fa-solid fa-list"></i>
-    <i class="fa-solid fa-volume-high"></i>
-</div>
+        <i class="fa-solid fa-microphone"></i>
+        <i class="fa-solid fa-list"></i>
+        <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+        <input
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="100"
+            class="volume-bar">
+    </div>
 
 </div>
                 </div>
@@ -232,4 +240,10 @@
         </div> <!-- main -->
 
     </body>
+
+    <audio id="audio-player">
+    <source src="./songs/songs.mp3" type="audio/mpeg">
+    </audio>
+
+     <script src="script.js"></script>
 </html>

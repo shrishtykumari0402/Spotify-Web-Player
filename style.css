@@ -298,6 +298,7 @@ a {
     justify-content:center;
     align-items:center;
     gap:1rem;
+    overflow:hidden;
 }
 
 .controls i{
@@ -310,8 +311,17 @@ a {
 }
 
 .volume-bar{
-    width: 80px;
+    width: 0;
+    opacity: 0;
     cursor: pointer;
+    transition: width 0.2s ease, opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.controls.volume-open .volume-bar{
+    width: 80px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 
@@ -337,6 +347,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.play-btn{
+    /* justify-items: center; */
+    padding-bottom: 2px;
 }
 
 .curr-time,
