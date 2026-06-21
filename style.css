@@ -170,10 +170,10 @@ a {
 
 .card {
     background-color: #232323;
-    width: 180px;
+    width: 150px;
     border-radius: 0.5rem;
     padding: 1rem;
-    margin-left: 1.5rem;
+    margin-left: 1.25rem;
     margin-top: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -398,4 +398,105 @@ a {
 .library::-webkit-scrollbar-thumb{
     background: #555;
     border-radius: 10px;
+}
+
+/* Next button sizing to match icons */
+#next-btn {
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Add-song floating form styles */
+.add-song-container {
+    position: fixed;
+    right: 16px;
+    bottom: 140px;
+    background: linear-gradient(180deg, rgba(40,40,40,0.95), rgba(28,28,28,0.95));
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #fff;
+    z-index: 200;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    width: 180px;
+}
+
+#add-song-form label{ 
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+#add-song-form input[type="file"],
+#add-song-form input[type="text"]{
+    width: 100%;
+    margin-top: 6px;
+    background: #1b1b1b;
+    border: 1px solid #2d2d2d;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+#add-song-form button{
+    width: 100%;
+    margin-top: 8px;
+    background: #1db954;
+    color: #000;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#add-song-form button:hover{
+    filter:brightness(.95);
+}
+
+/* Responsive: hide add-song form on small screens */
+@media (max-width: 600px) {
+    .add-song-container { display: none; }
+}
+
+/* Songs-as-cards styles */
+.songs-container{
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.song-card{
+    background: linear-gradient(180deg, #1f1f1f, #151515);
+    width: 160px;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    align-items: flex-start;
+}
+
+.song-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.song-card img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.song-card .song-title{
+    font-weight:600;
+    font-size:0.9rem;
+}
+
+.song-card .song-artist{
+    font-size:0.8rem;
+    color:#b3b3b3;
 }
